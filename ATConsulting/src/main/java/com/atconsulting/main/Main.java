@@ -20,8 +20,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.scheduling.annotation.EnableScheduling;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -32,9 +30,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  *
  * @author vita
  */
-@SpringBootApplication
-@EnableScheduling
-@Configuration
+@SpringBootApplication(scanBasePackages = {"com.atconsulting.config"})
 @EnableAutoConfiguration
 @ComponentScan(basePackages = "com.atconsulting")
 public class Main implements CommandLineRunner {
